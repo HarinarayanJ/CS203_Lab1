@@ -1,0 +1,35 @@
+[
+    {
+        "code": "CS101",
+        "name": "Introduction to Computer Science",
+        "instructor": "Dr. Smith",
+        "semester": "Fall 2024",
+        "schedule": "Mon, Wed, Fri 10:00-11:00 AM",
+        "classroom": "Room 101",
+        "prerequisites": "None",
+        "grading": "Midterm 30%, Final 50%, Homework 20%",
+        "description": "An introduction to the basics of computer science."
+    },
+    {
+        "code": "CS 203",
+        "name": "Software and Tools for AI",
+        "instructor": "Prof. Mayank Singh",
+        "semester": "Fall 2025",
+        "schedule": "Mon, Wed, Fri 10:00-11:00 AM",
+        "classroom": "AB 7/109",
+        "prerequisites": "Basic Python, Linux",
+        "grading": "50% Assignment, 50% Quiz",
+        "description": ""
+    },
+    {
+        "code": "CS 202",
+        "name": "Software Tools and Techniques",
+        "instructor": "Prof. Shouvick Mondal",
+        "semester": "Spring 2025",
+        "schedule": "Monday, Wednesday - 10 am",
+        "classroom": "10/202",
+        "prerequisites": "ES 112",
+        "grading": "50% Lab, 50% Exam",
+        "description": ""
+    }
+]
