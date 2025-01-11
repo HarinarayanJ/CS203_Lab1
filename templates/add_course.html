@@ -3,4 +3,50 @@
   <head>
     {% extends "base.html" %}
     {% block content %}
+    <h1>Add a Course</h1>
   </head>
+  <body>
+    <form method="post">
+      <label for="name">
+            Course name:
+      </label>
+        <input type="text" placeholder="course name" id="name" name="name" value="" oninvalid = 
+            alert('Please Enter course name!') required><br>
+      <label for="code">
+            Course code:
+      </label>
+        <input type="text" placeholder="course code" id="code" name="code" value="" oninvalid = 
+            alert('Please Enter course code!') required><br>
+      <label for="semester">
+            Semester:
+      </label>
+        <input type="text" placeholder="semester" id="semester" name="semester" value="" oninvalid = 
+            alert('Please Enter your semester!') required><br>
+      <label for="schedule">
+            Schedule:
+      </label>
+        <input type="text" placeholder="schedule" id="schedule" name="schedule" value="" oninvalid = 
+            alert('Please Enter your schedule!') required><br>
+      <label for="classroom">
+            Classroom:
+      </label>
+        <input type="text" placeholder="classroom" id="classroom" name="classroom" value="" oninvalid = 
+            alert('Please Enter your classroom!') required><br>
+      <label for="prerequisites">
+            Prerequisites:
+      </label>
+        <input type="text" placeholder="prerequisites" id="prerequisites" name="prerequisites" value="" oninvalid = 
+            alert('Please Enter the prerequisites!') required><br>
+      <label for="grading">
+            Grading:
+      </label>
+        <input type="text" placeholder="grading" id="grading" name="grading" value="" oninvalid = 
+            alert('Please Enter the grading scheme!') required><br>
+      <label for="description">
+            Description:
+      </label>
+        <input type="text" placeholder="description" id="description" name="description" value=""><br>
+      <input type="submit" value="Add the new course details">
+    <form>
+    <a href="{{ url_for('course_catalog') }}">Back to Catalog</a>
+  </body>
