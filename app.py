@@ -33,7 +33,7 @@ tracer = trace.get_tracer(__name__)
 # Jaeger Exporter
 j_e = JaegerExporter(
     agent_host_name="localhost",
-    agent_port=9411,
+    agent_port=6831,
 )
 
 
