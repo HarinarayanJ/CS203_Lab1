@@ -1,52 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
+      <!-- We use the base.html for the navigation bar -->
     {% extends "base.html" %}
     {% block content %}
-    <h1>Add a Course</h1>
+    <title>Add a Course</title>
+    <style>
+      /* Basic Styling */
+
+      label {
+        display: block;
+        margin-top: 1rem;
+        font-weight: bold;
+      }
+      input[type="text"],
+      input[type="submit"] {
+        width: 100%;
+        padding: 0.5rem;
+        margin-top: 0.5rem;
+        box-sizing: border-box;
+      }
+      a {
+        display: block;
+        margin-top: 1rem;
+        text-align: center;
+      }
+      h1 {
+
+            text-align: center;
+      }
+    </style>
   </head>
   <body>
+    <h1>Add a Course</h1>
+    <!-- All the inputs, we have not set "required" as the app checks for missing fields. -->
     <form method="post">
-      <label for="name">
-            Course name:
-      </label>
-        <input type="text" placeholder="course name" id="name" name="name" value="" oninvalid = 
-            alert("Please Enter course name!") required><br>
-      <label for="code">
-            Course code:
-      </label>
-        <input type="text" placeholder="course code" id="code" name="code" value="" oninvalid = 
-            alert("Please Enter course code!") required><br>
-      <label for="semester">
-            Semester:
-      </label>
-        <input type="text" placeholder="semester" id="semester" name="semester" value="" oninvalid = 
-            alert("Please Enter your semester!") required><br>
-      <label for="schedule">
-            Schedule:
-      </label>
-        <input type="text" placeholder="schedule" id="schedule" name="schedule" value="" oninvalid = 
-            alert("Please Enter your schedule!") required><br>
-      <label for="classroom">
-            Classroom:
-      </label>
-        <input type="text" placeholder="classroom" id="classroom" name="classroom" value="" oninvalid = 
-            alert("Please Enter your classroom!") required><br>
-      <label for="prerequisites">
-            Prerequisites:
-      </label>
-        <input type="text" placeholder="prerequisites" id="prerequisites" name="prerequisites" value="" oninvalid = 
-            alert("Please Enter the prerequisites!") required><br>
-      <label for="grading">
-            Grading:
-      </label>
-        <input type="text" placeholder="grading" id="grading" name="grading" value="" oninvalid = 
-            alert("Please Enter the grading scheme!") required><br>
-      <label for="description">
-            Description:
-      </label>
-        <input type="text" placeholder="description" id="description" name="description" value=""><br>
+      <label for="name">Course name:</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Enter course name"
+         
+        title="Please enter the course name"
+      >
+      
+      <label for="code">Course code:</label>
+      <input
+        type="text"
+        id="code"
+        name="code"
+        placeholder="Enter course code"
+         
+        title="Please enter the course code"
+      >
+      <label for="instructor">Instructor:</label>
+      <input
+        type="text"
+        id="instructor"
+        name="instructor"
+        placeholder="Enter instructor name"
+         
+        title="Please enter the instructor's name"
+      >
+      
+      <label for="semester">Semester:</label>
+      <input
+        type="text"
+        id="semester"
+        name="semester"
+        placeholder="Enter semester"
+         
+        title="Please enter the semester"
+      >
+      
+      <label for="schedule">Schedule:</label>
+      <input
+        type="text"
+        id="schedule"
+        name="schedule"
+        placeholder="Enter schedule"
+         
+        title="Please enter the schedule"
+      >
+      
+      <label for="classroom">Classroom:</label>
+      <input
+        type="text"
+        id="classroom"
+        name="classroom"
+        placeholder="Enter classroom"
+         
+        title="Please enter the classroom"
+      >
+      
+      <label for="prerequisites">Prerequisites:</label>
+      <input
+        type="text"
+        id="prerequisites"
+        name="prerequisites"
+        placeholder="Enter prerequisites"
+         
+        title="Please enter the prerequisites"
+      >
+      
+      <label for="grading">Grading:</label>
+      <input
+        type="text"
+        id="grading"
+        name="grading"
+        placeholder="Enter grading scheme"
+         
+        title="Please enter the grading scheme"
+      >
+      
+      <label for="description">Description:</label>
+      <input
+        type="text"
+        id="description"
+        name="description"
+        placeholder="Enter course description"
+      >
+      
       <input type="submit" value="Add the new course details">
     </form>
+
+      <!-- Link to go back to the catalog -->
     <a href="{{ url_for('course_catalog') }}">Back to Catalog</a>
+    {% endblock %}
   </body>
+</html>
